@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: 
+        url(../assets/fonts/static/Inter-Regular.ttf) format(truetype);
+}
+
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+    --color-attribution: hsl(228, 45%, 44%);
+    --font-size-regular: 0.6rem;
+}
+
+body {
+    font-family: 'inter', sans-serif;
+    color: var(--white);
+    background-color: var(--grey-900);
+}
+
+.main__container {
+    inline-size: clamp(221px, 30vw, 310px);
+    display: flex;
+    flex-direction: column;
+    min-block-size: 100vh;
+    margin-inline: auto;
+}
+
+.main__card {
+    margin-block: auto;
+    background-color: var(--grey-800);
+    padding: 1.3em;
+    text-align: center;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.main__profile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1.5em;
+}
+
+.main__picture {
+    inline-size: 100%;
+}
+
+.main__img {
+    display: block;
+    margin-inline: auto;
+    inline-size: 5em;
+    clip-path: circle();
+}
+
+.main__data {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.4em;
+}
+
+.main__name {
+    font-size: clamp(1.1rem, 1.5vw, calc(1.1rem * 1.4545));
+    letter-spacing: 0.08rem;
+}
+
+.main__address {
+
+    font-size: clamp(var(--font-size-regular), 0.8vw, calc(var(--font-size-regular) * 1.4545));
+    color: var(--green);
+}
+
+.main__text {
+    font-size: clamp(var(--font-size-regular), 0.8vw, calc(var(--font-size-regular) * 1.4545));
+}
+
+.main__buttons {
+    margin-block-start: 1em;
+}
+
+.main__links {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.main__link {
+    inline-size: 100%;
+    block-size: 3em;
+    background-color: var(--grey-700);
+    line-height: 3em;
+    border-radius: 0.5em;
+    text-decoration: none;
+    color: var(--white);
+    font-size: clamp(var(--font-size-regular), 0.8vw, calc(var(--font-size-regular) * 1.4545));
+    font-weight: 600;
+    cursor: pointer;
+    transition: 
+        background-color .5s,
+        color .5s;
+}
+
+.main__link:hover {
+    background-color: var(--green);
+    color: var(--grey-900);
+}
+
