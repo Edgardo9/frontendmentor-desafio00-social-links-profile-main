@@ -84,7 +84,7 @@ body {
 }
 
 .main__buttons {
-    margin-block-start: 1em;
+    margin-block-start: min(1em, 3vh);
 }
 
 .main__links {
