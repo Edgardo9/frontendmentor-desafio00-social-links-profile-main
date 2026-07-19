@@ -37,7 +37,7 @@ body {
 .main__card {
     margin-block: auto;
     background-color: var(--grey-800);
-    padding: 1.3em;
+    padding: min(1.3em, 5vw);
     text-align: center;
     border-radius: 0.5em;
     overflow: hidden;
@@ -115,3 +115,8 @@ body {
     color: var(--grey-900);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .main__link {
+    transition: none;
+  }
+}
